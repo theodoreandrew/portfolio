@@ -1,0 +1,171 @@
+.landing-bg {
+  position: fixed;
+  background: url("../images/landing-color2.jpeg") no-repeat;
+  background-size: cover;
+  background-position: right center;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: brightness(60%);
+  z-index: -1;
+  animation: bgSlide 2s linear;
+}
+
+@keyframes bgSlide {
+  from {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.landing-bg::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.burger {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.burger div {
+  height: 3px;
+  width: 25px;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+  transition-delay: 0s;
+}
+
+.burger div div {
+  background-color: #fff;
+  height: 100%;
+  width: 100%;
+  transition: all 0.3s ease;
+  transition-delay: 0.3s;
+}
+
+.active .line-1 {
+  transform: translateY(4px);
+}
+
+.active .line-2 {
+  transform: translateY(-4px);
+}
+
+.active .line-1 .line-inner-1 {
+  transform-origin: center;
+  transform: rotate(-45deg);
+}
+
+.active .line-2 .line-inner-2 {
+  transform-origin: center;
+  transform: rotate(45deg);
+}
+
+.welcome-msg {
+  color: #fff;
+  width: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 5%;
+  display: flex;
+  align-items: center;
+}
+
+.welcome-name {
+  text-transform: uppercase;
+  font-size: 53px;
+  font-weight: 100;
+  font-family: "Lato";
+  letter-spacing: -3px;
+  line-height: 0.8em;
+}
+
+.role {
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.motto {
+  color: rgba(255, 255, 255, 0.5);
+  margin-top: 20px;
+}
+
+.qotd {
+  font-weight: 100;
+  font-family: "Lato";
+  color: #ffffff;
+}
+
+.contact-me {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.vertical-line {
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  height: 50px;
+  margin: 0 15px;
+}
+
+.contact-container {
+  margin-top: 20px;
+  display: flex;
+  /* justify-content: center; */
+}
+
+.contact-links {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.fab {
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.fab:hover {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 664px) {
+  .welcome-msg {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+
+  .welcome-name {
+    font-size: 60px;
+  }
+
+  .welcome-container {
+    top: 15%;
+    left: 3%;
+    right: 1%;
+  }
+
+  .motto {
+    color: rgba(255, 255, 255, 0.4);
+  }
+}
