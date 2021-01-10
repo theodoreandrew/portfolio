@@ -24,9 +24,6 @@ const NavLanding = () => {
     burDivLine1.style.transitionDelay = !active ? '0.3s' : '0s';
     burDivLine2.style.transitionDelay = !active ? '0.3s' : '0s';
 
-    document
-      .querySelector('.nav-landing-container')
-      .classList.toggle('nav-landing-active');
     setTimeout(() => eachNavLinkAppear(), 400);
   };
 
@@ -59,7 +56,11 @@ const NavLanding = () => {
           <div className='line-inner-2' ref={burDivLine2Ref}></div>
         </div>
       </div>
-      <div className='nav-landing-container'>
+      <div
+        className={`nav-landing-container ${
+          active ? 'nav-landing-active' : ''
+        }`}
+      >
         <div className='nav-landing-links'>
           <div className='links-inner'>
             <img src={about} className='nav-img' alt='about' />
