@@ -1,6 +1,6 @@
 .landing-bg {
   position: fixed;
-  background: url("../images/landing-color2.jpeg") no-repeat;
+  background: url('../images/landing-color2.jpeg') no-repeat;
   background-size: cover;
   background-position: right center;
   height: 100%;
@@ -31,50 +31,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  content: "";
+  content: '';
   background-color: rgba(0, 0, 0, 0.2);
-}
-
-.burger {
-  position: absolute;
-  top: 40px;
-  right: 50px;
-  z-index: 10;
-  cursor: pointer;
-}
-
-.burger div {
-  height: 3px;
-  width: 25px;
-  margin: 5px 0;
-  transition: all 0.3s ease;
-  transition-delay: 0s;
-}
-
-.burger div div {
-  background-color: #fff;
-  height: 100%;
-  width: 100%;
-  transition: all 0.3s ease;
-  transition-delay: 0.3s;
-}
-
-.active .line-1 {
-  transform: translateY(4px);
-}
-
-.active .line-2 {
-  transform: translateY(-4px);
-}
-
-.active .line-1 .line-inner-1 {
-  transform-origin: center;
-  transform: rotate(-45deg);
-}
-
-.active .line-2 .line-inner-2 {
-  transform-origin: center;
-  transform: rotate(45deg);
 }
 
 .welcome-msg {
@@ -93,7 +51,7 @@
   text-transform: uppercase;
   font-size: 53px;
   font-weight: 100;
-  font-family: "Lato";
+  font-family: 'Lato';
   letter-spacing: -3px;
   line-height: 0.8em;
 }
@@ -110,7 +68,7 @@
 
 .qotd {
   font-weight: 100;
-  font-family: "Lato";
+  font-family: 'Lato';
   color: #ffffff;
 }
 
