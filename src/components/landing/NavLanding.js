@@ -6,7 +6,6 @@ import resume from '../../images/resume.jpeg';
 import './NavLanding.css';
 
 const NavLanding = () => {
-  const burRef = useRef(null);
   const burDiv1Ref = useRef(null);
   const burDiv2Ref = useRef(null);
   const burDivLine1Ref = useRef(null);
@@ -52,7 +51,6 @@ const NavLanding = () => {
       <div
         className={`burger ${active ? 'active' : ''}`}
         onClick={toggleLandingNav}
-        ref={burRef}
       >
         <div className='line-1' ref={burDiv1Ref}>
           <div className='line-inner-1' ref={burDivLine1Ref}></div>
