@@ -5,11 +5,11 @@ import project from '../../images/project2.jpeg';
 import resume from '../../images/resume.jpeg';
 import './NavLanding.css';
 
-const NavLanding = () => {
-  const burDiv1Ref = useRef(null);
-  const burDiv2Ref = useRef(null);
-  const burDivLine1Ref = useRef(null);
-  const burDivLine2Ref = useRef(null);
+export const NavLanding = () => {
+  const burDiv1Ref = useRef<HTMLDivElement | null>(null);
+  const burDiv2Ref = useRef<HTMLDivElement | null>(null);
+  const burDivLine1Ref = useRef<HTMLDivElement | null>(null);
+  const burDivLine2Ref = useRef<HTMLDivElement | null>(null);
   const [active, setActive] = useState(false);
 
   const toggleLandingNav = () => {
@@ -19,17 +19,20 @@ const NavLanding = () => {
     const burDivLine2 = burDivLine2Ref.current;
 
     setActive((prevState) => !prevState);
-    burDiv1.style.transitionDelay = active ? '0.3s' : '0s';
-    burDiv2.style.transitionDelay = active ? '0.3s' : '0s';
-    burDivLine1.style.transitionDelay = !active ? '0.3s' : '0s';
-    burDivLine2.style.transitionDelay = !active ? '0.3s' : '0s';
+
+    if (burDiv1 && burDiv2 && burDivLine1 && burDivLine2) {
+      burDiv1.style.transitionDelay = active ? '0.3s' : '0s';
+      burDiv2.style.transitionDelay = active ? '0.3s' : '0s';
+      burDivLine1.style.transitionDelay = !active ? '0.3s' : '0s';
+      burDivLine2.style.transitionDelay = !active ? '0.3s' : '0s';
+    }
 
     setTimeout(() => eachNavLinkAppear(), 400);
   };
 
   const eachNavLinkAppear = () => {
-    const navImgLinks = [...document.querySelectorAll('.nav-img')];
-    const navTxtLinks = [...document.querySelectorAll('.nav-text')];
+    const navImgLinks = document.querySelectorAll('.nav-img');
+    const navTxtLinks = document.querySelectorAll('.nav-text');
 
     for (let i = 0; i < navImgLinks.length; i++) {
       navImgLinks[i].classList.toggle('nav-img-appear');
@@ -89,5 +92,3 @@ const NavLanding = () => {
     </>
   );
 };
-
-export default NavLanding;

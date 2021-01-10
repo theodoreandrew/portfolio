@@ -1,14 +1,13 @@
 import React from 'react';
 
-import NavLanding from './landing/NavLanding';
-import landingBg from '../images/landing-color2.jpeg';
+import { NavLanding } from './landing/NavLanding';
 
 import './LandingPage.css';
 
-const LandingPage = () => {
+export const LandingPage = () => {
   return (
     <div className='landing-container'>
-      <div className='landing-bg' src={landingBg} alt='Theodore Andrew'></div>
+      <div className='landing-bg'></div>
       <NavLanding />
 
       <div className='welcome-msg'>
@@ -78,5 +77,3 @@ const LandingPage = () => {
     </div>
   );
 };
-
-export default LandingPage;
