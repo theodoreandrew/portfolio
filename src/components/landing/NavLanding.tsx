@@ -2,7 +2,6 @@ import React, { useRef, useState } from 'react';
 
 import about from '../../images/about.jpeg';
 import project from '../../images/project2.jpeg';
-import resume from '../../images/resume.jpeg';
 import './NavLanding.css';
 
 export const NavLanding = () => {
@@ -77,14 +76,6 @@ export const NavLanding = () => {
             <img src={project} className='nav-img' alt='project' />
             <div className='nav-text'>
               <span className='nav-name'>Projects</span>
-            </div>
-          </div>
-        </div>
-        <div className='nav-landing-links resume-link'>
-          <div className='links-inner'>
-            <img src={resume} className='nav-img' alt='resume' />
-            <div className='nav-text'>
-              <span className='nav-name'>Resume</span>
             </div>
           </div>
         </div>
