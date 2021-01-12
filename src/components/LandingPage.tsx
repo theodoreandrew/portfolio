@@ -2,16 +2,22 @@ import React from 'react';
 
 import './LandingPage.css';
 
-export const LandingPage = () => {
+interface LandingPageProps {
+  active: boolean;
+}
+
+export const LandingPage = ({ active }: LandingPageProps) => {
   return (
-    <div>
-      <div className='landing-bg'></div>
-      <div className='section1'>
-        <div className='greetings'>Hello World, I'm</div>
-        <div className='full-name-container'>
-          <div className='full-name'>Theodore Andrew</div>
+    <div className={`container ${active ? 'container-active' : ''}`}>
+      <section id='landing-section'>
+        <div className='landing-bg'></div>
+        <div className='section1'>
+          <div className='greetings'>Hello World, I'm</div>
+          <div className='full-name-container'>
+            <div className='full-name'>Theodore Andrew</div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   );
 };

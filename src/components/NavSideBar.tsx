@@ -1,13 +1,17 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef } from 'react';
 
 import './NavSideBar.css';
 
-export const NavSideBar = () => {
+interface NavSideBarProps {
+  active: boolean;
+  toggleActive: (isActive: boolean) => void;
+}
+
+export const NavSideBar = ({ active, toggleActive }: NavSideBarProps) => {
   const burDiv1Ref = useRef<HTMLDivElement | null>(null);
   const burDiv2Ref = useRef<HTMLDivElement | null>(null);
   const burDivLine1Ref = useRef<HTMLDivElement | null>(null);
   const burDivLine2Ref = useRef<HTMLDivElement | null>(null);
-  const [active, setActive] = useState(false);
 
   const toggleLandingNav = () => {
     const burDiv1 = burDiv1Ref.current;
@@ -15,7 +19,7 @@ export const NavSideBar = () => {
     const burDivLine1 = burDivLine1Ref.current;
     const burDivLine2 = burDivLine2Ref.current;
 
-    setActive((prevState) => !prevState);
+    toggleActive(!active);
 
     if (burDiv1 && burDiv2 && burDivLine1 && burDivLine2) {
       burDiv1.style.transitionDelay = active ? '0.3s' : '0s';
@@ -38,6 +42,23 @@ export const NavSideBar = () => {
           <div className='line-inner-2' ref={burDivLine2Ref}></div>
         </div>
       </div>
+      <nav
+        className={`nav-landing-container ${
+          active ? 'nav-landing-active' : ''
+        }`}
+      >
+        <div className='menus'>
+          <div className='nav-link'>
+            <div className='item'>About</div>
+          </div>
+          <div className='nav-link'>
+            <div className='item'>Experience</div>
+          </div>
+          <div className='nav-link'>
+            <div className='item'>Contact</div>
+          </div>
+        </div>
+      </nav>
     </>
   );
 };
