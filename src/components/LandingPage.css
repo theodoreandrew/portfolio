@@ -9,7 +9,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  filter: brightness(60%);
+  filter: brightness(90%);
   z-index: -1;
   animation: bgSlide 2s linear;
 }
@@ -21,7 +21,7 @@
   right: 0;
   bottom: 0;
   content: '';
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 @keyframes bgSlide {
@@ -51,7 +51,7 @@
 
 .greetings {
   font-size: 20px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   font-family: 'Lato';
   margin-bottom: 10px;
@@ -71,19 +71,19 @@
 .full-name::before {
   height: 0.5px;
   background-color: white;
-  width: 40px;
+  width: 30px;
   content: '';
   position: absolute;
   top: 50%;
-  left: -50px;
+  left: -40px;
 }
 
 .full-name::after {
   height: 0.5px;
   background-color: white;
-  width: 40px;
+  width: 30px;
   content: '';
   position: absolute;
   top: 50%;
-  right: -45px;
+  right: -40px;
 }
