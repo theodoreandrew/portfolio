@@ -1,0 +1,89 @@
+.landing-bg {
+  position: fixed;
+  background: url('../images/portfolio2.JPG') no-repeat;
+  background-size: cover;
+  background-position: center left;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  filter: brightness(60%);
+  z-index: -1;
+  animation: bgSlide 2s linear;
+}
+
+.landing-bg::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: '';
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@keyframes bgSlide {
+  from {
+    opacity: 0;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.section1 {
+  color: white;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.greetings {
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  font-family: 'Lato';
+  margin-bottom: 10px;
+}
+
+.full-name-container {
+  position: relative;
+}
+
+.full-name {
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 200;
+  font-family: 'Lato';
+}
+
+.full-name::before {
+  height: 0.5px;
+  background-color: white;
+  width: 40px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -50px;
+}
+
+.full-name::after {
+  height: 0.5px;
+  background-color: white;
+  width: 40px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -45px;
+}
