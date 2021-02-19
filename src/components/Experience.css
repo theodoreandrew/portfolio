@@ -1,0 +1,32 @@
+#experience {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-title {
+  font-size: 35px;
+  position: relative;
+}
+
+.section-title::before {
+  height: 0.5px;
+  background-color: white;
+  width: 30px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -40px;
+}
+
+.section-title::after {
+  height: 0.5px;
+  background-color: white;
+  width: 30px;
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -40px;
+}

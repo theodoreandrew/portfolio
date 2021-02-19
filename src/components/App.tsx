@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { Experience } from './Experience';
 import { LandingPage } from './LandingPage';
 import { NavSideBar } from './NavSideBar';
 import './App.css';
@@ -12,9 +13,10 @@ export const App = () => {
   };
 
   return (
-    <div>
+    <div className={`container ${active ? 'container-active' : ''}`}>
       <NavSideBar active={active} toggleActive={toggleActive} />
       <LandingPage active={active} />
+      <Experience />
     </div>
   );
 };
