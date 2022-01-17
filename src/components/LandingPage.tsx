@@ -8,7 +8,9 @@ interface LandingPageProps {
 
 export const LandingPage = ({ active }: LandingPageProps) => {
   return (
-    <section id='landing-section'>
+    <section
+      className={`landing-section${active ? ' landing-section-active' : ''}`}
+    >
       <div className='landing-bg'></div>
       <div className='section1'>
         <div className='greetings'>Hello World, I'm</div>

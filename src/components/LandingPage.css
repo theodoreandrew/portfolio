@@ -1,5 +1,9 @@
-#landing-section {
+.landing-section {
   min-height: 100vh;
+}
+
+.landing-section-active {
+  filter: blur(3px);
 }
 
 .landing-bg {
